@@ -1,0 +1,203 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.3, 10 May 2020) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper,academicons]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{0F99FF}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faStar}
+
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Connor P. Adams}
+\tagline{}
+
+\personalinfo{%
+  \email{connor.adams5461994@gmail.com}
+  \mailaddress{330 Nord Ave, Apt. 304}
+  \location{Chico, CA 95926}\\
+  \github{Haskili}
+  \linkedin{connor-adams-bb3b37189}
+}
+
+\makecvheader
+
+\AtBeginEnvironment{itemize}{\small}
+
+\columnratio{0.6}
+
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Blink}{Personal Project}{Completed \textit{(Public)}}{}
+\begin{itemize}
+\item OpenCV-based CCTV alternative that minimizes memory requirements and features a HC classifier for object recognition
+\item Utilizes threading, SSIM, PSNR, and flat thresholded difference for matrix comparison operations
+\end{itemize}
+
+\divider
+
+\cvevent{PyAI}{Collaborative Project}{Ongoing \textit{(Available upon request)}}{}
+\begin{itemize}
+\item Implements PRISM, ID3, C4.5, and other basic AI algorithms
+\item Plans are to include clustering and other unsupervised learning techniques with minor visualization GUI using Qt
+\end{itemize}
+
+\divider
+
+\cvevent{WiScan}{Personal Project}{Ongoing \textit{(Private)}}{}
+\begin{itemize}
+\item Scans all available access points and gathers information about the surrounding networks
+\item Uses basic port-scanning and network security techniques to check for any vulnerabilities/CVE's
+\item Analyzes results in R and generates a report that outlines any security issues it found
+\end{itemize}
+
+\divider
+
+\cvevent{ShortFTP}{Personal Project}{Completed \textit{(Public)}}{}
+\begin{itemize}
+\item Transfers files using sockets with minimal resource consumption
+\item Implemented SHA1 verification, automatic testing, and specialized event logging
+\end{itemize}
+
+\divider
+
+\cvevent{National Cyber League 2019}{Security Competition}{Completed -- Gold Division (ID: 9GA6P54HUBPM)}{}
+\begin{itemize}
+\item Placed in 'Gold' division for individual game based on performance in pre-season  
+\item Gained valuable experience with security techniques and tool usage used in industry settings
+\end{itemize}
+
+\divider
+
+\cvevent{SmartCCTV}{Collaborative School Project}{Completed \textit{(Available  upon request)}}{}
+\begin{itemize}
+\item Recording software that saves only 'human events' built with human recognition and a Qt UI system meant for easy interaction for the the end user
+\item Leverages low-level system calls to efficiently use resources
+\end{itemize}
+
+
+\newpage
+
+\switchcolumn
+
+\cvsection{Objective}
+Student seeking for opportunity to expand horizons in an industry setting where I can apply my knowledge and learn new skills.
+
+\cvsection{Achievements}
+
+\cvachievement{\faTrophy}{Education}{Rose to a 3.6 local GPA in my first semester at CSU Chico}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Community}{Frequent blood-donor for over 5 years}
+
+\divider
+
+\cvachievement{\faUsers}{Experience}{Proud member of CSUC's Association for Computing Machinery (ACM) branch, which is focused on improving skills and competitive programming}
+
+\cvsection{Strengths}
+\cvtag{System Administration}
+\cvtag{IPS Usage}\\
+\cvtag{Data parsing}
+\cvtag{Automated Testing}\\
+\cvtag{AGILE}
+\cvtag{LaTeX Documentation}\\
+\divider\smallskip
+
+\cvtag{PyTorch Basics}
+\cvtag{Applied R-CNN basics}\\
+\cvtag{Computer Vision}
+\cvtag{Statistical Modeling}\\
+\cvtag{Dynamic Programming}
+\cvtag{Algorithim Design}
+
+\cvsection{Languages}
+\cvskill{C/C++}{5}
+\cvskill{Go}{4}
+\cvskill{Rust}{2}
+\cvskill{Python}{5}
+\cvskill{Bash}{4}
+\cvskill{R}{4}
+\cvskill{Javascript}{3}
+
+\cvsection{Education}
+
+\cvevent{A.S.\ in Computer Science}{Sierra College}{December 2018}{}
+
+\divider
+
+\cvevent{B.S.\ in Computer Science}{California State University, Chico}{January 2019 - Current}{}
+
+\newpage
+
+
+
+\end{paracol}
+
+\end{document}
